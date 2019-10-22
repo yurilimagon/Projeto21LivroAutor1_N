@@ -28,11 +28,14 @@ public class Principal {
         
         Autor autor01 = new Autor("Julio Verne", 1910, "jv@email.com",livro01);
         Autor autor02 = new Autor("Dan Brown", 1910, "db@email.com",livro02);
+        Autor autor03 = new Autor("Dan B", 1970, "db@email.com",new Livro("O Código Davinci", "ABC", 2019, autor02));
+        
         livro01.setEscritor(autor01);
         livro01.addEscritores(autor01);
         
         livro02.setEscritor(autor02);
         livro01.addEscritores(autor02);
+        livro01.addEscritores(autor03);
         
         System.out.println("Livro: " + livro01.getTitulo() + "\n" + livro01.getEditora() + "\n" +
                                         livro01.getAno() + "\n" + livro01.getEscritor().getNome());
